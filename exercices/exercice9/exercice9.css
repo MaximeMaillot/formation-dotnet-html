@@ -1,0 +1,63 @@
+.header {
+    display: inline-block;
+    height:5vh;
+    width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: rgba(255, 0, 0, 0.8);
+    z-index: 99;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.box {
+    display:grid;
+    grid-template-rows: 3fr 1fr;
+    width: 25vw;
+    height: 25vh;
+}
+
+.box-top {
+    background-color:#2a2a2a;
+    text-align: center;
+    height: 20vh;
+    line-height: 20vh;
+    font-size: x-large;
+    color: white;
+}
+
+.box-bottom {
+    background-color:#9c9c9c;
+    height: 5vh;
+}
+
+.box:nth-child(even) {
+    position:relative;
+    top: 40%;
+    right: 40%;
+    z-index:1;
+}
+
+.box:nth-child(even) .box-top {
+    background-color: rgb(6, 6, 113);
+}
+
+.box:nth-child(even) .box-bottom {
+    background-color: rgb(88, 0, 88);
+}
+.box:nth-child(even) .box-bottom:hover {
+    background-color: rgb(220, 8, 220);
+    cursor: pointer;
+}
+
+.box-bottom:hover {
+    background-color:#bebebe;
+    cursor: pointer;
+}
